@@ -54,6 +54,8 @@ function sorting(){
       return new Date(a.doneDate) - new Date(b.doneDate)
     });
 
+    // How to compare dates
+    // https://stackoverflow.com/questions/68329689/javascript-sort-to-do-list-by-date-then-status
     notDoneItems.sort(function(a,b){
       return new Date(a.dueDate) - new Date(b.dueDate)
     });
@@ -124,6 +126,8 @@ const Home = ({ route, navigation }) => {
             return (
               <>
               <View>
+                {/* How to use touchableOpacity */}
+                {/* https://reactnative.dev/docs/touchableopacity */}
                 <TouchableOpacity
                   key={i}
                   style={styles.button}
@@ -134,6 +138,8 @@ const Home = ({ route, navigation }) => {
                 <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{task.name}</Text>
                 <Text style={{fontSize: 15}}>{"Due On: " + task.dueDate}</Text>
                 <Text style={{ fontSize: 18 }}>Completed?</Text>
+                {/* Checkbox usage */}
+                {/* https://github.com/react-native-checkbox/react-native-checkbox */}
                 <CheckBox
                   disabled={false}
                   value={task.done}

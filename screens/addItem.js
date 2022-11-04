@@ -60,6 +60,8 @@ const Home = ({ navigation }) => {
         <Text style={{ fontSize: 18 }}>Select New Due Date</Text>
       </TouchableOpacity>
 
+      {/* Date Picker */}
+      {/* https://github.com/henninghall/react-native-date-picker */}
       <DatePicker style={{alignSelf:'center'}}
         modal
         open={open}
